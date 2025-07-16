@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "name": "whisper-weave-agent-voice",
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/webhook/whatsapp",
+      "dest": "/api/webhook/whatsapp.js"
+    },
+    {
+      "src": "/api/webhook/flutterwave",
+      "dest": "/api/webhook/flutterwave.js"
+    },
+    {
+      "src": "/api/voice/process",
+      "dest": "/api/voice/process.js"
+    },
+    {
+      "src": "/api/health",
+      "dest": "/api/health.js"
+    },
+    {
+      "src": "/api/lexi/onboard",
+      "dest": "/api/lexi/onboard.js"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "TERMII_API_KEY": "@termii_api_key",
+    "TERMII_SENDER_ID": "@termii_sender_id", 
+    "TERMII_WHATSAPP_NUMBER": "@termii_whatsapp_number",
+    "SUPABASE_URL": "@supabase_url",
+    "SUPABASE_ANON_KEY": "@supabase_anon_key",
+    "ANTHROPIC_API_KEY": "@anthropic_api_key",
+    "ELEVENLABS_API_KEY": "@elevenlabs_api_key",
+    "FLUTTERWAVE_SECRET_KEY": "@flutterwave_secret_key",
+    "FLUTTERWAVE_PUBLIC_KEY": "@flutterwave_public_key"
+  }
+}
