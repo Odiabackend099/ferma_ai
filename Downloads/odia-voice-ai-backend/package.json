@@ -1,0 +1,39 @@
+{
+  "name": "odia-voice-ai-backend",
+  "version": "2.1.0",
+  "description": "ODIA Voice AI Backend - Nigerian Voice-to-Text API System",
+  "main": "api/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step needed for serverless functions'",
+    "start": "vercel --prod",
+    "test": "echo 'Tests not implemented yet'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "voice-ai",
+    "nigeria",
+    "whisper",
+    "claude",
+    "voice-to-text",
+    "whatsapp",
+    "telegram",
+    "api"
+  ],
+  "author": "ODIA AI",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/odia-voice-ai-backend.git"
+  }
+}
